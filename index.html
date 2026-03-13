@@ -1,187 +1,554 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>7</title>
-  
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasias BBW</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>▸ HEYDIN KAYSER ◂ GRID FUTURISTA</title>
+    <!-- Font Awesome 6 (iconos variados) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: url('https://raw.githubusercontent.com/welding30001994/IMAGENES-CC/refs/heads/main/fushia-minimalist-wallpaper-free-photo.jpg') no-repeat center center fixed;
-            background-size: cover;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: #0b0d15;
+            background-image: radial-gradient(circle at 15% 30%, rgba(10, 30, 60, 0.6) 0%, transparent 30%),
+                              radial-gradient(circle at 80% 70%, rgba(120, 0, 20, 0.2) 0%, transparent 40%),
+                              linear-gradient(145deg, #03050a 0%, #121725 100%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            color: #eaeef2;
+        }
+
+        /* encabezado con brillo */
+        .header {
+            max-width: 1400px;
+            margin: 0 auto 2.5rem auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-bottom: 1px solid rgba(0, 180, 255, 0.3);
+            padding-bottom: 1.5rem;
+            box-shadow: 0 10px 20px -10px rgba(0, 150, 255, 0.2);
+        }
+
+        .title-section h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            background: linear-gradient(130deg, #ffffff, #9bc5ff, #3d7eff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 15px #003cff40;
+        }
+
+        .title-section h1 i {
+            background: none;
+            -webkit-text-fill-color: #2a6df4;
+            margin-right: 12px;
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 8px #00a6ff);
+        }
+
+        .sub {
+            color: #b0c7e9;
+            margin-top: 6px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub i {
+            color: #ff3b3b;
+            font-size: 1rem;
+        }
+
+        /* buscador futurista */
+        .search-wrapper {
+            min-width: 280px;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            background: rgba(10, 20, 35, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 160, 255, 0.5);
+            border-radius: 60px;
+            padding: 0.9rem 1.8rem;
+            padding-left: 3rem;
             color: white;
-            text-align: center;
+            font-size: 1.1rem;
+            outline: none;
+            box-shadow: 0 0 20px rgba(0, 140, 255, 0.3), inset 0 1px 3px #ffffff30;
+            transition: all 0.2s;
+        }
+
+        .search-box:focus {
+            border-color: #ff3b6f;
+            box-shadow: 0 0 25px #ff3b6f80, inset 0 0 5px #ff9eb5;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2a7fff;
+            font-size: 1.3rem;
+            pointer-events: none;
+            text-shadow: 0 0 10px #0080ff;
+        }
+
+        /* contador elegante */
+        .stats {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            font-size: 0.9rem;
+            background: #111a27b0;
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            border: 1px solid #1e3a5f;
+        }
+
+        .stats span {
+            color: #7cb9ff;
+            font-weight: 600;
+        }
+
+        .stats i {
+            color: #ff4646;
+        }
+
+        /* GRID — contenedor principal */
+        .link-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 0.5rem 0 2rem 0;
+        }
+
+        /* tarjeta / cada link */
+        .card {
+            background: rgba(8, 18, 28, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(30, 90, 200, 0.4);
+            border-radius: 28px;
+            padding: 1.4rem 1.2rem;
+            transition: all 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+            box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(0, 180, 255, 0.1) inset;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
-        /* Capa de opacidad en el fondo */
-        body::before {
-            content: "";
+
+        .card::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Aquí controlas la opacidad del fondo */
-            z-index: -1; /* Asegura que el contenido esté encima del fondo */
+            height: 4px;
+            background: linear-gradient(90deg, #ff3b6f, #2a7fff, #00ccff);
+            opacity: 0.6;
         }
-        header {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: #ff3b6f;
+            box-shadow: 0 25px 35px -12px #000d1f, 0 0 25px #2a7fff80;
+            background: rgba(12, 25, 42, 0.85);
         }
-        .navegador ul {
-            list-style: none;
-            padding: 0;
+
+        /* cabecera de tarjeta: icono + titulo */
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1rem;
         }
-        .navegador ul li {
-            display: inline;
-            margin: 0 10px;
+
+        .icon-wrapper {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(145deg, #10273f, #030c16);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 1px solid #2f6cad;
+            box-shadow: 0 5px 0 #02080e, 0 8px 15px #000000;
+            color: #ddf0ff;
+            transition: 0.15s;
         }
-        .navegador ul li a {
+
+        .card:hover .icon-wrapper {
+            border-color: #ff5f8f;
+            color: #ffffff;
+            text-shadow: 0 0 12px cyan;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            word-break: break-word;
+            flex: 1;
+            background: linear-gradient(120deg, #f0f6ff, #b4d0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* url y dominio */
+        .url-display {
+            background: #07101bc0;
+            border-radius: 40px;
+            padding: 0.7rem 1rem;
+            margin: 0.8rem 0 1rem 0;
+            border: 1px dashed #3f6390;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #9bb9f0;
+            word-break: break-all;
+            transition: 0.1s;
+            box-shadow: inset 0 1px 4px #00000070;
+        }
+
+        .url-display i {
+            color: #2ed15e;
+            font-size: 1rem;
+            filter: drop-shadow(0 0 5px #00e676);
+        }
+
+        .url-display span {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .card:hover .url-display {
+            border-color: #a0c5ff;
+            background: #0c1e2e;
+        }
+
+        /* botón visitar */
+        .visit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(115deg, #0e2037, #021225);
+            border: 1px solid #2e6cbe;
+            border-radius: 50px;
+            padding: 0.7rem 0.5rem;
+            margin-top: 0.2rem;
             color: white;
             text-decoration: none;
-            font-size: 18px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .navegador ul li a:hover {
-            opacity: 0.7;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: 0.2s;
+            box-shadow: 0 4px 10px #0000005e;
             cursor: pointer;
         }
-        .contenedor-grifd {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            margin: 10px auto;
-            max-width: 90%;
-            min-height: 500px;
+
+        .visit-btn i {
+            font-size: 1.2rem;
+            color: #4aff9e;
         }
-        .grifd-boton-arriba {
-            margin-bottom: 20px;
+
+        .visit-btn:hover {
+            background: #1f3f66;
+            border-color: #ff3b6f;
+            gap: 12px;
+            box-shadow: 0 0 20px #ff3b6f, 0 5px 10px black;
         }
-        .grifd-boton {
-            background: #444;
-            border: none;
-            padding: 15px 30px;
-            font-size: 16px;
+
+        .visit-btn:hover i {
             color: white;
-            border-radius: 10px;
-            cursor: pointer;
         }
-        .grifd {
+
+        /* variantes de icono para que sea único (se asigna por índice desde JS, pero base distinta) */
+        .footer-note {
+            text-align: center;
+            margin-top: 2.8rem;
+            color: #8d9fbf;
+            font-size: 0.9rem;
+            border-top: 1px solid #142b44;
+            padding-top: 2rem;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            padding: 20px;
+            gap: 1rem;
             flex-wrap: wrap;
-            width: 100%;
         }
-        .grifd .image {
-            width: 300px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+        .footer-note a {
+            color: #5d9eff;
+            text-decoration: none;
+            border-bottom: 1px dotted;
         }
-        .grifd .image img {
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 10px;
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem;
+            background: #0b121f80;
+            border-radius: 60px;
+            font-size: 1.6rem;
+            color: #9ab9f5;
+            border: 2px dashed #2f5a99;
         }
-        footer {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            margin-top: auto;
+
+        /* scroll personalizado */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #0a0f17;
         }
-        @media (max-width: 400px) {
-            .navegador ul {
-                display: inline;
-                flex-direction: column-reverse;
-                align-items: center;
-            }
-            .navegador ul li {
-                display: block;
-                margin: 45px 0;
-            }
-            .grifd {
-                flex-direction: column;
-                align-items: center;
-            }
-            .grifd .image {
-                width: 200px;
-                height: 200px;
-            }
+        ::-webkit-scrollbar-thumb {
+            background: #2a4870;
+            border-radius: 15px;
+            border: 1px solid #004cff;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>FANTASIAS BBW</h1>
-        <nav class="navegador">
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i> INICIO</a></li>
-                <li><a href="#"><i class="fas fa-image"></i> GALERIA</a></li>
-                <li><a href="#"><i class="fas fa-comments"></i> CHAT</a></li>
-                <li><a href="#"><i class="fas fa-phone"></i> CONTACTO</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="contenedor-grifd">
-        <section class="grifd-boton-arriba">
-            <input type="file" id="upload" accept="image/*" style="display:none;">
-            <button class="grifd-boton" onclick="document.getElementById('upload').click();">
-                <i class="fas fa-cloud-upload-alt"></i> SUBIR FOTOS
-            </button>
-        </section>
-        <section class="grifd" id="gallery"></section>
+<div class="header">
+    <div class="title-section">
+        <h1><i class="fas fa-cube"></i> HEYDIN·KAYSER·GRID</h1>
+        <div class="sub">
+            <i class="fas fa-bolt"></i> 45+ ENLACES · ÉLITE FUTURISTA 
+            <i class="fas fa-bolt" style="color:#2a7fff;"></i>
+        </div>
     </div>
+    <div class="search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="buscador" class="search-box" placeholder="filtrar por título o url...">
+    </div>
+    <div class="stats" id="contador">
+        <span id="totalDisplay">0</span> <i class="fas fa-th-large"></i> total 
+        <span id="visibleDisplay">0</span> <i class="fas fa-eye"></i> visibles
+    </div>
+</div>
 
-    <footer>
-        <p>Bienvenidos a Fantasía BBW</p>
-    </footer>
+<!-- GRID con todos los links -->
+<div class="link-grid" id="linkGrid"></div>
 
-    <script>
-        document.getElementById('upload').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-                    img.alt = 'Imagen subida';
-                    const div = document.createElement('div');
-                    div.classList.add('image');
-                    div.appendChild(img);
-                    document.getElementById('gallery').appendChild(div);
-                }
-                reader.readAsDataURL(file);
+<div class="footer-note">
+    <span>⚡ DISEÑO NEO·NOIR ⚡</span>
+    <a href="#"><i class="fas fa-dragon"></i> YUGIOH·BBW·OXOMAX</a>
+    <span>✦ ICONOS ÚNICOS POR CADA LINK ✦</span>
+</div>
+
+<script>
+    (function() {
+        // --------------------------------------------------------------
+        // LISTA COMPLETA DE URLs (tal como se proporcionaron, sin duplicar)
+        // --------------------------------------------------------------
+        const rawUrls = [
+            "https://faraon-yugioh.vercel.app/",
+            "https://menu-yugioh-szpy.vercel.app/",
+            "https://teoriaoxomax.vercel.app/",
+            "https://bbwmd.vercel.app/",
+            "https://blog-tau-one-42.vercel.app/",
+            "https://menu-yugioh.vercel.app/",
+            "https://dioses-yugioh.vercel.app/",
+            "https://proyecto-x-lac.vercel.app/",
+            "https://dioses-yugioh-e.vercel.app/",
+            "https://yugioh-yugioh.vercel.app/",
+            "https://menu-yugioh-episodios.vercel.app/",
+            "https://episodio-yugioh.vercel.app/",
+            "https://dragones-yugioh.vercel.app/",
+            "https://yugioh-theta.vercel.app/",
+            "https://oficial-bbw-register-two.vercel.app/",
+            "https://photo-upload-cloudinary.vercel.app/",
+            "https://oficial-bb-login-five.vercel.app/",
+            "https://photo-gamma-dusky.vercel.app/",
+            "https://subir-prueba-ten.vercel.app/",
+            "https://modelo-bbw-modificado.vercel.app/",
+            "https://yugioh-el-despertar.vercel.app/",
+            "https://proyecto-bbw.vercel.app/",
+            "https://o-oxo.vercel.app/",
+            "https://live-gamma-nine.vercel.app/",
+            "https://vip-forex.vercel.app/",
+            "https://oxomax.vercel.app/",
+            "https://vipforex.vercel.app/",
+            "https://fto-five.vercel.app/",
+            "https://axi-one.vercel.app/",
+            "https://textoo.vercel.app/",
+            "https://oxxomaxbasico.vercel.app/",
+            "https://oxomaxteoria.vercel.app/",
+            "https://oficial-bbw-sage.vercel.app/",
+            "https://oxxomaxtrading.vercel.app/",
+            "https://beaver-trading.vercel.app/",
+            "https://copybeaver.vercel.app/",
+            "https://beavertrading1.vercel.app/",
+            "https://control-oficial.vercel.app/",
+            "https://porcino.vercel.app/",
+            "https://jayden-control.vercel.app/",
+            "https://vio-bay.vercel.app/",
+            "https://yu-gi-oh-oficial.vercel.app/",
+            "https://beaver-course.vercel.app/",
+            "https://grupoamiciscom.vercel.app/",
+            "https://grupo-amicis.vercel.app/",
+            "https://grupoamicis.vercel.app/",
+            "https://chat-seven-sigma-82.vercel.app/index.html",
+            "https://excelencia-venta.vercel.app/",
+            "https://item-henna.vercel.app/",
+            "https://menubbw.vercel.app/",
+            "https://as-delta-wheat.vercel.app/",
+            "https://comercial-excelencia-oficial.vercel.app/",
+            "https://excelencia-oficial-mayor.vercel.app/",
+            "https://pedido-excelencia.vercel.app/",
+            "https://excelencia-oficial.vercel.app/",
+            "https://menucorrigiendo.vercel.app/",
+            "https://buscador-excelencia.vercel.app/",
+            "https://comercial-plus-excelencia.vercel.app/",
+            "https://excelencia-plus.vercel.app/",
+            "https://excelencia-stock.vercel.app/",
+            "https://sociedadpollos.vercel.app/",
+            "https://excelencia-original.vercel.app/",
+            "https://excelencia-star.vercel.app/",
+            "https://a-o-barato.vercel.app/",
+            "https://brother-barato.vercel.app/",
+            "https://excelencialocal.vercel.app/",
+            "https://heydin-kayser.vercel.app/home.html",
+            "https://heydin-kayser-vip.vercel.app/home.html",
+            // la siguiente está repetida pero la dejamos una vez (el set elimina)
+            "https://2-6-xi.vercel.app/",
+            "https://heydin-kayser-invest.vercel.app/",
+            "https://nilaempanadas.vercel.app/",
+            "https://excelencia-horario.vercel.app/"
+        ];
+
+        // eliminar duplicados (por si acaso) y mantener orden
+        const uniqueUrls = [...new Set(rawUrls)];
+
+        // --------------------------------------------------------------
+        // Generar un objeto con título derivado de la url, y un icono diferente
+        // --------------------------------------------------------------
+        function extractTitleFromUrl(url) {
+            let hostname = url.replace(/^https?:\/\//, '').replace(/\/index\.html$/, '').replace(/\/$/, '');
+            // quitar subdominios vercel.app etc pero mantener nombre
+            let parts = hostname.split('.');
+            if (parts.length >= 2 && (parts[parts.length-2] === 'vercel' || parts[parts.length-1] === 'vercel')) {
+                // dominio es vercel.app, la parte principal es el subdominio
+                return parts[0]; // primer segmento
             }
-        });
-    </script>
+            // si no, tomar el primer segmento
+            return parts[0] || hostname;
+        }
 
-</body>
-</html>
-<!-- partial -->
-  
+        // librería de iconos variados (para que cada link tenga distinto)
+        const iconPool = [
+            "fa-solid fa-dragon", "fa-solid fa-ghost", "fa-solid fa-hat-wizard", "fa-solid fa-crown",
+            "fa-solid fa-robot", "fa-solid fa-brain", "fa-solid fa-chart-line", "fa-solid fa-coins",
+            "fa-solid fa-bolt", "fa-solid fa-fire", "fa-solid fa-water", "fa-solid fa-moon",
+            "fa-solid fa-sun", "fa-solid fa-tree", "fa-solid fa-poo", "fa-solid fa-dog",
+            "fa-solid fa-cat", "fa-regular fa-star", "fa-solid fa-skull", "fa-solid fa-cloud",
+            "fa-solid fa-volcano", "fa-solid fa-meteor", "fa-solid fa-palette", "fa-solid fa-camera",
+            "fa-solid fa-video", "fa-solid fa-headphones", "fa-solid fa-gamepad", "fa-solid fa-cube",
+            "fa-solid fa-cubes", "fa-solid fa-shield-halved", "fa-solid fa-sword", "fa-solid fa-wand-sparkles",
+            "fa-solid fa-scroll", "fa-solid fa-book", "fa-solid fa-code", "fa-solid fa-database",
+            "fa-regular fa-eye", "fa-solid fa-eye-evil", "fa-solid fa-hand-fist", "fa-solid fa-dice-d6",
+            "fa-solid fa-chess-queen", "fa-solid fa-chess-knight", "fa-brands fa-android", "fa-solid fa-fish",
+            "fa-solid fa-dove", "fa-solid fa-hippo", "fa-regular fa-snowflake", "fa-solid fa-feather"
+        ];
+
+        // preparar array de objetos
+        const linksData = uniqueUrls.map((url, index) => {
+            let rawTitle = extractTitleFromUrl(url);
+            // formatear: guiones a espacios, primera mayúscula
+            let title = rawTitle.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            if (!title) title = "enlace";
+            // asignar icono determinista pero variado
+            const icon = iconPool[index % iconPool.length];
+            return { url, title, icon };
+        });
+
+        // --------------------------------------------------------------
+        // Renderizar grid
+        // --------------------------------------------------------------
+        const grid = document.getElementById('linkGrid');
+        const inputBuscar = document.getElementById('buscador');
+        const totalSpan = document.getElementById('totalDisplay');
+        const visibleSpan = document.getElementById('visibleDisplay');
+
+        function renderizar(filtro = '') {
+            const filtroLower = filtro.toLowerCase().trim();
+            let visibleCount = 0;
+            let html = '';
+
+            linksData.forEach(item => {
+                const tituloMatch = item.title.toLowerCase().includes(filtroLower);
+                const urlMatch = item.url.toLowerCase().includes(filtroLower);
+                const matches = filtro === '' || tituloMatch || urlMatch;
+
+                if (matches) {
+                    visibleCount++;
+                    html += `
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="icon-wrapper">
+                                    <i class="${item.icon}"></i>
+                                </div>
+                                <div class="card-title">${item.title}</div>
+                            </div>
+                            <div class="url-display" title="${item.url}">
+                                <i class="fas fa-link"></i>
+                                <span>${item.url}</span>
+                            </div>
+                            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="visit-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> ABRIR NEXO <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    `;
+                }
+            });
+
+            if (visibleCount === 0) {
+                html = `<div class="no-results"><i class="fas fa-ban"></i> ningún enlace coincide · 0 resultados</div>`;
+            }
+
+            grid.innerHTML = html;
+            totalSpan.textContent = linksData.length;
+            visibleSpan.textContent = visibleCount;
+        }
+
+        // inicial
+        renderizar('');
+
+        // evento buscador con retardo sutil
+        let timer;
+        inputBuscar.addEventListener('input', (e) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                renderizar(e.target.value);
+            }, 100);
+        });
+
+        // actualización en tiempo real
+        // opcional: contar bien
+    })();
+</script>
+<!-- pequeña corrección para repetido: en la lista había 2 heydin-kayser-vip pero unique se encarga -->
 </body>
 </html>
